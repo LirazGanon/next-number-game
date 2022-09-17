@@ -144,3 +144,27 @@ td:hover {
 .hide{
     display: none;
 }
+
+@media screen and (max-width: 600px) {
+    h1{
+        margin: 20px;
+        font-size: 1.7rem;
+    }
+
+    .button{
+        width: 100px
+    }
+
+    .info{
+        font-size: 1.1rem;
+        width: 120px;
+    }
+    
+    .board{
+        width: 97%;
+    }
+    
+    .play-again{
+        width: 250px;
+    }
+}
