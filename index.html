@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun&display=swap" rel="stylesheet">
+    <title>Liraz Touch the Numbers</title>
+</head>
+
+<body onload="onInit()">
+    <h1>Touch the Numbers</h1>
+    <div class="top-container">
+        <div class="top-button">
+            <button class="button  highlight" onclick="onLevelSelect(this)"  data-type="easy"><span>Easy </span></button>
+            <button class="button" onclick="onLevelSelect(this)" data-type="medium"><span>Medium </span></button>
+            <button class="button" onclick="onLevelSelect(this)"  data-type="hard"><span>Hard </span></button>
+        </div>
+        <div class="info-container">
+            <div class="info top-right">
+                Next Number:<br><span class="next-number">1</span>
+            </div>
+            <div class="info top-left">
+                <div class="timer">
+                    Time:<br><span id="seconds">00</span>:<span id="tens">00</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="board" >
+        <table class="board-table zoom">
+        </table>
+    </div>
+    <div class="end-game hide">
+        <h1>You Finished The Game!</h1>
+        <button class="button play-again" onclick="onInit()"><span>Play Again </span></button>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/util.js"></script>
+</body>
+
+</html>
