@@ -162,6 +162,7 @@ td:hover {
     
     .board{
         width: 97%;
+        height: 400px;
     }
     
     .play-again{
