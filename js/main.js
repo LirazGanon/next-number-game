@@ -18,7 +18,7 @@ function renderBoardTable() {
     for (var i = 0; i < col; i++) {
         strHTML += '<tr>'
         for (var j = 0; j < col; j++) {
-            strHTML += `<td onclick="onCellClicked(this)" >${gBoardNums[couter]}</td>`
+            strHTML += `<td class="disable-select" onclick="onCellClicked(this)" >${gBoardNums[couter]}</td>`
             couter++
         }
         strHTML += '<tr>'
