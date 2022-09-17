@@ -1,2 +1,2 @@
-# next-number-game
+# Touch-number-game
 simple vanilla javaScript game
