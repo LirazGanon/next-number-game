@@ -160,12 +160,15 @@ td:hover {
     }
 
     .button{
-        width: 130px
+        width: 110px;
+        font-size: 1.1rem;
+        margin: 2px;
     }
 
     .info{
         font-size: 1.1rem;
         width: 130px;
+        margin: 5px;
     }
     
     .board{
@@ -184,5 +187,10 @@ td:hover {
         top: 0;
         right: -20px;
         transition: 0.5s;
+    }
+
+    .info-container {
+        margin: 10px auto;
+    
     }
 }
