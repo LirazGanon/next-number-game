@@ -160,12 +160,12 @@ td:hover {
     }
 
     .button{
-        width: 100px
+        width: 130px
     }
 
     .info{
         font-size: 1.1rem;
-        width: 120px;
+        width: 150px;
     }
     
     .board{
@@ -175,5 +175,14 @@ td:hover {
     
     .play-again{
         width: 250px;
+    }
+
+    .button span:after {
+        content: '';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
     }
 }

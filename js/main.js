@@ -18,7 +18,7 @@ function renderBoardTable() {
     for (var i = 0; i < col; i++) {
         strHTML += '<tr>'
         for (var j = 0; j < col; j++) {
-            strHTML += `<td class="disable-select" onclick="onCellClicked(this)" >${gBoardNums[couter]}</td>`
+            strHTML += `<td class="disable-select" onclick="onCellClicked(this,${gBoardNums[couter]})" >${gBoardNums[couter]}</td>`
             couter++
         }
         strHTML += '<tr>'
@@ -28,11 +28,10 @@ function renderBoardTable() {
     elBoardTable.innerHTML = strHTML
 }
 
-function onCellClicked(clickedNum) {
+function onCellClicked(elClickedNum, clickedNum) {
     if (gNextNum === 1) runTimer()
-    var currClicked = +clickedNum.innerText
-    if (currClicked === gNextNum) {
-        clickedNum.style.backgroundColor = 'rgb(79, 79, 79)'
+    if (clickedNum === gNextNum) {
+        elClickedNum.style.backgroundColor = 'rgb(79, 79, 79)'
         gNextNum++
         if (gNextNum > gBoardsize) {
             endGame()
@@ -72,7 +71,7 @@ function resetGame() {
     elBoard = document.querySelector('.board')
     elBoard.classList.remove('hide')
     elEndGameDiv = document.querySelector('.end-game')
-    elEndGameDiv.classList.add('hide')  
+    elEndGameDiv.classList.add('hide')
     var elNextNumberSpan = document.querySelector('.next-number')
     elNextNumberSpan.innerText = gNextNum
     resetTimer()
